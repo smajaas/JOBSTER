@@ -4,7 +4,7 @@ import customFetch from '../../utils/axios';
 import {
   addUserToLocalStorage,
   getUserFromLocalStorage,
-  removeFromLocalStorage,
+  removeUserFromLocalStorage,
 } from '../../utils/localStorage';
 import {
   loginUserThunk,
@@ -45,10 +45,13 @@ const userSlice = createSlice({
     toggleSidebar: (state) => {
       state.isSidebarOpen = !state.isSidebarOpen;
     },
-    logoutUser: (state) => {
+    logoutUser: (state, { payload }) => {
       state.user = null;
       state.isSidebarOpen = false;
-      removeFromLocalStorage();
+      removeUserFromLocalStorage();
+      if (payload) {
+        toast.success(payload);
+      }
     },
   },
   extraReducers: {
