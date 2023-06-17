@@ -5,6 +5,7 @@ import { getUserFromLocalStorage } from '../../utils/localStorage';
 import { useDispatch } from 'react-redux';
 
 import { logoutUser } from '../user/userSlice';
+import { showLoading, hideLoading, getAllJobs } from '../allJobs/allJobsSlice';
 
 const initialState = {
   isLoading: false,
