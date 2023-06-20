@@ -71,8 +71,10 @@ const allJobsSlice = createSlice({
     [getAllJobs.fulfilled]: (state, { payload }) => {
       state.isLoading = false;
       state.jobs = payload.jobs;
+      state.numOfPages = payload.numOfPages;
+      state.totalJobs = payload.totalJobs;
     },
-    [getAllJobs.pending]: (state, { payload }) => {
+    [getAllJobs.rejected]: (state, { payload }) => {
       state.isLoading = false;
       toast.error(payload);
     },
@@ -84,7 +86,7 @@ const allJobsSlice = createSlice({
       state.stats = payload.defaultStats;
       state.monthlyApplications = payload.monthlyApplications;
     },
-    [showStats.pending]: (state, { payload }) => {
+    [showStats.rejected]: (state, { payload }) => {
       state.isLoading = false;
       toast.error(payload);
     },
