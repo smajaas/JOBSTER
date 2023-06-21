@@ -61,12 +61,10 @@ npm install normalize.css
 - SET BEFORE 'index.css'
 - replace contents of index.css
 - if any questions about normalize or specific styles
-- Coding Addict - [Default Starter Video](https://youtu.be/UDdyGNlQK5w)
-- Repo - [Default Starter Repo](https://github.com/john-smilga/default-starter)
+-
 
 #### 4) Landing Page - Setup
 
-- zoom level 175%
 - markdown preview extension
 - get something on the screen
 - react router and styled components right after
@@ -119,7 +117,6 @@ export default Landing;
 - no name collisions
 - apply javascript logic
 - [Styled Components Docs](https://styled-components.com/)
-- [Styled Components Course](https://www.udemy.com/course/styled-components-tutorial-and-project-course/?referralCode=9DABB172FCB2625B663F)
 
 ```sh
 npm install styled-components
